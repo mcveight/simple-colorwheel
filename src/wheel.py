@@ -14,7 +14,7 @@ class wheel:
           [0x00, 0x00, 0xff], 
           [0xff, 0x00, 0xff]]
 
-        def update_hexvalue():
+        def update_GUI():
             pass
 
         def draw_wheel():
