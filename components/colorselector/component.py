@@ -1,3 +1,12 @@
+'''
+color selector widget module
+
+This module provides a class to access different tkinter widgets objects
+used for an HSL implementation of color picking.
+
+'''
+
+
 import tkinter as tk
 from tkinter import Frame, Label
 from tkinter.constants import HORIZONTAL, BOTTOM

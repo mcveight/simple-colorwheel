@@ -1,3 +1,10 @@
+'''
+controller implementation for the MVC design pattern.
+
+it intercommunicates de view (components module) and the model (app module)
+
+'''
+
 from components.view import gui
 import tkinter as tk
 

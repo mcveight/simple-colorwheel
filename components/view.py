@@ -1,3 +1,10 @@
+'''
+view implemenation for the MVC design pattern
+
+it's an interface to manage the  UI elements on the software
+'''
+
+
 import tkinter as tk
 from .colorselector.component import colorselector  as colselec
 class gui():
