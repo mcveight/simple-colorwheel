@@ -1,52 +1,23 @@
 import tkinter as tk
-
+from .colorselector.component import colorselector  as colselec
 class gui():
     
-    def __init__(self, root):
+    def __init__(self, root, TITLE, GEOMETRY):
         super().__init__()
-
+        
+        # root window settings
         self.root = root
-        
-        self.sq_primary_color = 0
-
-        self.sq_secondary_color = 0
-
-        self.hex_textbox = tk.Entry(self.root, width=8, 
-                                    bg="white", fg="black" )
-
-        self.initUI()
-
-    def initUI(self):
-        
-        # initialize modules
+        self.root.title(TITLE)
+        self.root.geometry(GEOMETRY)
 
 
-        self.root.title("swc 0.01b")
+        # unresizable root window
+        self.root.resizable(0, 0)
 
-        frame_colours = tk.Frame(self.root, padx = 0, pady = 0,
-                                cursor = "hand2", bd = 2)
-         
-        self.hex_textbox = tk.Entry(self.root, width=8, 
-                                    bg="white", fg="black" )
+        #init components
 
-        self.sq_primary_color = tk.Canvas(self.root, bg="#000000")
-
-        self.sq_secondary_color = tk.Canvas(self.root, bg="#000000");
+        self.colselec = colselec(self.root)
 
 
-       
-        # grid positioning 
-        '''
-        frame_colours.grid(row=0)
-
-        self.sq_primary_color.grid(row=0,sticky=tk.E)
-
-        self.sq_secondary_color.grid(row=0, column=1, sticky=tk.W)
-        '''
-        self.hex_textbox.grid(row=0, column=1, columnspan=3,
-                              padx=10, pady=10)
-
-
-    def update_colour(oldColor: hex, oldBox, newBox):
-        pass
-
+    def build(self):
+        self.colselec.build()
